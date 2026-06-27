@@ -106,8 +106,4 @@ The Express backend exposes the following RESTful API endpoints at `/api/notes`:
 | `PUT` | `/:id` | Update an existing note |
 | `DELETE`| `/:id` | Delete a note |
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/akashregana77/Notes/issues).
-
----
 *Built with ❤️ by [akashregana77](https://github.com/akashregana77)*
