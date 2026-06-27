@@ -1,0 +1,130 @@
+.detail-page {
+  min-height: 100vh;
+  padding: 48px 40px 80px;
+}
+
+.detail-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.detail-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  animation: fadeIn 0.4s ease;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  animation: fadeIn 0.35s ease;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--primary);
+  transform: translateX(-2px);
+}
+
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 110, 64, 0.1);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 110, 64, 0.15);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+}
+
+.delete-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+}
+
+.detail-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  animation: fadeInUp 0.4s ease;
+}
+
+.detail-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-card .form-group {
+  margin-bottom: 24px;
+}
+
+.detail-card-actions {
+  padding-top: 16px;
+}
+
+.update-btn {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.update-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+  transform: translateY(-1px);
+}
+
+.update-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.update-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .detail-card {
+    padding: 28px 24px;
+  }
+
+  .detail-page {
+    padding: 28px 20px 60px;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #7C4DFF;
+  --primary-hover: #6a3de8;
+  --primary-glow: rgba(124, 77, 255, 0.25);
+  --secondary: #B388FF;
+  --accent: #FF6E40;
+  --accent-hover: #e85d35;
+  --accent-glow: rgba(255, 110, 64, 0.25);
+  --bg: #0F0F1A;
+  --surface: #1C1C2E;
+  --surface-hover: #24243a;
+  --surface-border: rgba(124, 77, 255, 0.12);
+  --text: #E8E8F5;
+  --text-muted: rgba(232, 232, 245, 0.5);
+  --text-secondary: rgba(232, 232, 245, 0.7);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(124, 77, 255, 0.08);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(124, 77, 255, 0.12);
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --content-max-width: 1120px;
+  --content-padding: 0 40px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background-color: rgba(15, 15, 26, 0.6);
+  border: 1.5px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:hover,
+textarea:hover {
+  border-color: rgba(124, 77, 255, 0.25);
+  background-color: rgba(15, 15, 26, 0.8);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+  background-color: rgba(15, 15, 26, 0.9);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.7;
+}
+
+label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--primary);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --content-padding: 0 20px;
+  }
+}
